@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 900px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.box-product {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 50px;
+}
+
+.box-product__wrap {
+  position: relative;
+  width: 100%;
+}
+
+.box-product__input {
+  padding: 15px 20px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 10px;
+  width: 100%;
+}
+
+.box-product__input::placeholder {
+  font-weight: 600;
+  color: rgb(147, 147, 147);
+}
+
+.box-product__input:focus {
+  outline: none;
+  outline: 1px solid rgb(7, 215, 7);
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 10px;
+  color: red;
+}
+
+.btn {
+  padding: 0 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 163, 0);
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  outline: 1px solid rgb(2, 138, 2);
+}
+
+.btn:hover {
+  background-color: rgb(1, 213, 1);
+}
+
+.btn:active {
+  background-color: rgb(2, 138, 2);
+}
+
+/* Список */
+.check-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.check-item__empty {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.check-item__text {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #0D1117;
+}
+
+.check-item {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  column-gap: 10px;
+  background-color: white;
+}
+
+.check-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.check-item__table {
+  width: 100%;
+}
+
+.check-item__thead-td {
+  font-size: 12px;
+  width: 20%;
+  color: rgb(195, 195, 195);
+}
+
+.check-item__thead-td:first-child {
+  width: 40%;
+}
+
+.check-item__tbody-td {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0D1117;
+}
+
+.check-item__btn {
+  padding: 0 15px;
+}
+
+.check-item__btn--red {
+  padding: 0 15px;
+  background-color: rgb(213, 5, 5);
+  transition: background-color .3s ease-in-out;
+}
+
+.check-item__btn--red:focus {
+  outline: none;
+  outline: 1px solid rgb(142, 5, 5);
+}
+
+.check-item__btn--red:hover {
+  background-color: rgb(238, 124, 124);
+}
+
+.check-item__btn--red:active {
+  background-color: rgb(142, 5, 5);
+}
+
+/* Итоговая стоимость */
+.total-cost {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #3d3e41;
+}
+
+.total-cost__strong {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.total-cost__strong--price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
