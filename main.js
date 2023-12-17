@@ -121,9 +121,15 @@ function checksItem(index, product, quantity, price, totalPrice) {
     productArray[index] = newProduct;
 
     let newQuantity = Number(prompt('Введите кол-во товара', quantityArray[index]));
+    if (Math.sign(newQuantity) === -1) {
+      newQuantity = Number(prompt('Введите положительное кол-во товара', quantityArray[index]));
+    }
     quantityArray[index] = newQuantity;
 
     let newPrice = Number(prompt('Введите цену товара', priceArray[index]));
+    if (Math.sign(newPrice) === -1) {
+      newPrice = Number(prompt('Введите положительную цену товара', priceArray[index]));
+    }
     priceArray[index] = newPrice;
 
     totalPriceArray[index] = newQuantity * newPrice;
@@ -203,6 +209,11 @@ productInpBtn.onclick = function () {
   //Проверка количество тавара
   quantityErrorLabel.textContent = '';
 
+  if (Math.sign(quantityValue) === -1) {
+    quantityErrorLabel.textContent = 'Вы ввели отрицательное число тавара';
+    validationResult = true;
+  }
+
   if (quantityValue === 0) {
     quantityErrorLabel.textContent = 'Введите количество тавара';
     validationResult = true;
@@ -210,6 +221,11 @@ productInpBtn.onclick = function () {
 
   //Проверка цены тавара
   priceErrorLabel.textContent = '';
+
+  if (Math.sign(priceValue) === -1) {
+    priceErrorLabel.textContent = 'Вы ввели отрицательную цену тавара';
+    validationResult = true;
+  }
 
   if (priceValue === 0) {
     priceErrorLabel.textContent = 'Введите цену тавара';
